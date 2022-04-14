@@ -25,7 +25,7 @@
     "test-watch": "vitest watch",
     "pretty": "prettier -w \"./src/**/*.(ts|js)\"",
     "preversion": "npm run test",
-    "version": "npm run build-mock",
+    "version": "npm run build",
     "postversion": "git push"
   },
   "husky": {
