@@ -35,7 +35,7 @@ describe('AsyncEstimator: work: consuming a promise that executes with a variabl
         initialEstimate: 5000, // initial guess, but will be adjusted by the estimator internal after the promise has competed with the actual execution time so next time will be more precise
         interval: 100,
         intervalHandler: async (current: number) => {
-          logs.push({ current, info: asyncEstimator.getCurrentEstimate() })
+          logs.push({ current })
         }
       }
 
@@ -65,7 +65,7 @@ describe('AsyncEstimator: work: consuming a promise that executes with a variabl
         initialEstimate: 1000, // initial guess, but will be adjusted by the estimator internal after the promise has competed with the actual execution time so next time will be more precise
         interval: 100,
         intervalHandler: async (current: number) => {
-          logs.push({ current, info: asyncEstimator.getCurrentEstimate() })
+          logs.push({ current })
         }
       }
 

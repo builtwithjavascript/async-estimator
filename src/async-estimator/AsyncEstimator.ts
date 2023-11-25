@@ -41,7 +41,9 @@ export class AsyncEstimator implements IAsyncEstimator {
           const elapsedTime = Date.now() - startTime
           const remainingTime = estimate - elapsedTime
           if (remainingTime > 0) {
-            await intervalHandler(Number((elapsedTime / estimate).toFixed(2)))
+            const newEstimate = Number((elapsedTime / estimate).toFixed(2))
+            this.setEstimate(newEstimate)
+            await intervalHandler(newEstimate)
           } else {
             clearInterval(intervalId)
             intervalHandler(0.99)
@@ -51,6 +53,8 @@ export class AsyncEstimator implements IAsyncEstimator {
 
       targetAsyncFunction.then(async (targetReturnValue) => {
         clearInterval(intervalId)
+        // ending, set to 100%
+        this.setEstimate(1)
         await intervalHandler(1)
         const actualDuration = Date.now() - startTime
         // update the estimate with the actual duration so next time we have a better idea of
