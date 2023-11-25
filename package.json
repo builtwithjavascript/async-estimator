@@ -1,6 +1,6 @@
 {
   "name": "@builtwithjavascript/async-estimator",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Helps estimating when an async function will complete. Use this to display a more accurate progress bar or similar UI feedback mechanism for long-running async calls.",
   "author": "Damiano Fusco",
   "license": "MIT",
