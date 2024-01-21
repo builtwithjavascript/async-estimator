@@ -11,6 +11,7 @@ Use this to display a more accurate progress bar or similar UI feedback mechanis
 @types/ws,
 husky,
 jsdom,
+prettier,
 pretty-quick,
 typescript,
 vite,

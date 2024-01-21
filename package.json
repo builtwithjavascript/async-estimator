@@ -17,13 +17,14 @@
     "async-estimator, id, builtwithjavascript, large scale apps"
   ],
   "scripts": {
+    "clean": "rm -rf ./dist",
     "build-types": "tsc src/main.ts --declaration --emitDeclarationOnly --outDir dist",
     "build": "tsc && vite build && npm run build-types",
     "pub": "npm publish --access public",
-    "preview": "vite preview",
     "test": "vitest run",
     "test-watch": "vitest watch",
     "pretty": "npx prettier -w \"./src/**/*.(ts|js)\"",
+    "version-patch": "npm version patch -m \"Patch version\"",
     "preversion": "npm run test",
     "version": "npm run build",
     "postversion": "git push"
@@ -34,16 +35,16 @@
     }
   },
   "devDependencies": {
-    "@types/jest": "^29.5.10",
-    "@types/node": "^20.10.0",
+    "@types/jest": "^29.5.11",
+    "@types/node": "^20.11.5",
     "@types/ws": "^8.5.10",
     "husky": "^8.0.3",
-    "jsdom": "^22.1.0",
-    "prettier": "^3.1.0",
-    "pretty-quick": "^3.1.3",
-    "typescript": "^5.3.2",
-    "vite": "^4.5.0",
-    "vitest": "^0.34.6"
+    "jsdom": "^24.0.0",
+    "prettier": "^3.2.4",
+    "pretty-quick": "^4.0.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
   },
   "files": [
     "dist"

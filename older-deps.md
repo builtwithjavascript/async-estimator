@@ -1,0 +1,10 @@
+"@types/jest": "^29.5.10",
+"@types/node": "^20.10.0",
+"@types/ws": "^8.5.10",
+"husky": "^8.0.3",
+"jsdom": "^22.1.0",
+"prettier": "^3.1.0",
+"pretty-quick": "^3.1.3",
+"typescript": "^5.3.2",
+"vite": "^4.5.0",
+"vitest": "^0.34.6"
