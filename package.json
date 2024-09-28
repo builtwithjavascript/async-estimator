@@ -27,7 +27,8 @@
     "version-patch": "npm version patch -m \"Patch version\"",
     "preversion": "npm run test",
     "version": "npm run build",
-    "postversion": "git push"
+    "postversion": "git push",
+    "push": "npm run pretty; git add .; git commit -m \"Latest\"; git push"
   },
   "husky": {
     "hooks": {
