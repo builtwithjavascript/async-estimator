@@ -1,6 +1,6 @@
 {
   "name": "@builtwithjavascript/async-estimator",
-  "version": "1.0.7",
+  "version": "1.1.1",
   "description": "Helps estimating when an async function will complete. Use this to display a more accurate progress bar or similar UI feedback mechanism for long-running async calls.",
   "author": "Damiano Fusco",
   "license": "MIT",
@@ -19,7 +19,7 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build-types": "tsc src/main.ts --declaration --emitDeclarationOnly --outDir dist",
-    "build": "tsc && vite build && npm run build-types",
+    "build": "npm run pretty; tsc && vite build && npm run build-types",
     "pub": "npm publish --access public",
     "test": "vitest run",
     "test-watch": "vitest watch",
@@ -30,21 +30,12 @@
     "postversion": "git push",
     "push": "npm run pretty; git add .; git commit -m \"Latest\"; git push"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged \"./src/**/*.(ts|js)\""
-    }
-  },
   "devDependencies": {
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.11.5",
-    "@types/ws": "^8.5.10",
-    "husky": "^8.0.3",
-    "jsdom": "^24.0.0",
-    "prettier": "^3.2.4",
-    "pretty-quick": "^4.0.0",
-    "typescript": "^5.3.3",
-    "vite": "^7.0.3",
+    "@types/node": "^24.4.0",
+    "jsdom": "^27.0.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
     "vitest": "^3.2.4"
   },
   "files": [
