@@ -1,6 +1,6 @@
 {
   "name": "@builtwithjavascript/async-estimator",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Helps estimating when an async function will complete. Use this to display a more accurate progress bar or similar UI feedback mechanism for long-running async calls.",
   "author": "Damiano Fusco",
   "license": "MIT",
@@ -30,14 +30,6 @@
     "postversion": "git push",
     "push": "npm run pretty; git add .; git commit -m \"Latest\"; git push"
   },
-  "devDependencies": {
-    "@types/node": "^24.4.0",
-    "jsdom": "^27.0.0",
-    "prettier": "^3.6.2",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.5",
-    "vitest": "^3.2.4"
-  },
   "files": [
     "dist"
   ],
@@ -52,5 +44,12 @@
       "require": "./dist/async-estimator.umd.js"
     },
     "./package.json": "./package.json"
+  },
+  "dependencies": {
+    "@types/node": "^25.0.10",
+    "jsdom": "^27.4.0",
+    "prettier": "^3.8.1",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
   }
 }
