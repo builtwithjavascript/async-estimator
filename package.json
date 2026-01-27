@@ -20,7 +20,7 @@
     "clean": "rm -rf ./dist",
     "build-types": "tsc src/main.ts --declaration --emitDeclarationOnly --outDir dist",
     "build": "npm run pretty; tsc && vite build && npm run build-types",
-    "pub": "npm publish --access public",
+    "pub": "npm run build; npm publish --access public --otp=",
     "test": "vitest run",
     "test-watch": "vitest watch",
     "pretty": "npx prettier -w \"./src/**/*.(ts|js)\"",
